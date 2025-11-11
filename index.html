@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main_div">
+        <h1 class="main_title">TODO LIST</h1>
+        <div class="line"></div>
+        <div class="card">
+            <div class="inputdiv">
+                <input type="text" class="inputhere" placeholder="Tasks to be Done">
+                <button onclick="addtask()" class="addbutton">Add</button>
+            </div>
+            <div class="tasksbox">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        let inputele=document.querySelector(".inputhere");
+        let allinput="";
+        inputele.addEventListener("input",(event)=>{
+                console.log(
+                    event.target.value
+                )
+                allinput=event.target.value
+                //event.target.value=""
+        })
+        function addtask(){
+            
+            console.log("in add")
+            console.log(allinput)
+            let ele=document.querySelector(".tasksbox")
+
+            let creatediv =document.createElement("div");
+            creatediv.className="tasksdiv";
+            let textdata=document.createTextNode(allinput);
+            //textdata.Classnanme="texttext";
+            ele.appendChild(creatediv)
+            creatediv.appendChild(textdata);
+            //document.taskbox.appendChild(creatediv);
+            console.log("done")
+            console.log(creatediv.innerText)
+            //event.target.value=""
+
+            inputele.value=""
+
+        }
+        
+        
+    </script>
+</body>
+</html>
