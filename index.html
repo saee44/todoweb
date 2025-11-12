@@ -49,9 +49,24 @@
             console.log(creatediv.innerText)
             //event.target.value=""
 
+            let insidedivele=document.createElement("button")
+
+            insidedivele.className="deletetask"
+            creatediv.appendChild(insidedivele)
+            
+            let deleteicon=document.createElement("img")
+            deleteicon.setAttribute("src","icons8-delete-25.png")
+            insidedivele.appendChild(deleteicon)
+
+            insidedivele.addEventListener("click",()=>{
+                creatediv.remove();
+            })
+
             inputele.value=""
 
+
         }
+        
         
         
     </script>
