@@ -29,12 +29,18 @@
                 console.log(
                     event.target.value
                 )
+                
                 allinput=event.target.value
                 //event.target.value=""
         })
+        
         function addtask(){
             
             console.log("in add")
+            if(inputele.value.trim()==""){
+                    alert("Please enter a task before adding.")
+                    return
+                }
             console.log(allinput)
             let ele=document.querySelector(".tasksbox")
 
@@ -63,6 +69,7 @@
             })
 
             inputele.value=""
+            allinput=""
 
 
         }
